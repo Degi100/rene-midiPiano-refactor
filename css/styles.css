@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#piano {
+    clip-path: inset(15px 0px 0px 0px);
+    margin-top: -15px;
+}
+
+.white-key {
+    stroke: #555555;
+    fill: #FFFFF7;
+}
+
+.white-key:hover {
+    fill: rgb(151, 151, 151);
+    cursor: pointer;
+}
+.white-key:active {
+    fill: yellow;
+    cursor: pointer;
+}
+
+
+.black-key {
+    stroke: #979797;
+    fill: #4b4b4b;
+}
+.white-key-text {
+    font-size: 1.3em;
+    pointer-events: none;
+    user-select: none;
+}
+
+.black-key:hover {
+    fill: rgb(99, 96, 96);
+    cursor: pointer;
+}
+
+.black-key:active {
+    fill: yellow;
+    cursor: pointer;
+}
+
+.black-key-text {
+    font-size: 1em;
+    fill: #fff;
+    font-weight: 200;
+    pointer-events: none;
+    user-select: none;
+}
+.show {
+    fill: #f5f541;
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+.show.black-key ~ text {
+    fill: #000;
+}
