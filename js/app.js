@@ -17,9 +17,9 @@ if (navigator.requestMIDIAccess) {
   navigator.requestMIDIAccess().then(success, failure);
 }
 
-const app = {
-  setupPiano() {
-    const piano = document.querySelector("#piano");
+const piano = {
+  setup() {
+    const pianoElem = document.querySelector("#piano");
     const allNaturalNotes = this.getAllNaturalNotes(range);
     const pianoWidth = allNaturalNotes.length * whiteKeyWidth;
     const SVG = this.createMainSVG(pianoWidth, pianoHeight);
@@ -123,7 +123,7 @@ const app = {
       SVG.appendChild(blackKeyTextGroup);
     });
     // Add main SVG to piano div
-    piano.appendChild(SVG);
+    pianoElem.appendChild(SVG);
   },
   createOctave(octaveNumber) {
     const octave = utils.createSVGElement("g");
@@ -265,7 +265,7 @@ function noteOn(note, velocity) {
 
   console.log(channelKeyMap[note.toString()]);
   const stringNote = channelKeyMap[note.toString()];
-  if (stringNote) app.displayNotes([stringNote]);
+  if (stringNote) piano.displayNotes([stringNote]);
 
   osc.connect(oscGain);
   osc.connect(velocityGain);
@@ -306,4 +306,4 @@ function failure() {
   console.log("Could not connect MIDI");
 }
 
-app.setupPiano();
+piano.setup();
