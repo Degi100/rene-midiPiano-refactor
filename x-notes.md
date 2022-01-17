@@ -1,4 +1,22 @@
-### Thanks to https://github.com/musicandcode/Javascript-SVG-Piano/blob/main/app.js ###
+spur 1 drumpattern
+spur 2 piano
+spur 3 violine
+spur 4 git
+spur 5	bass
+spur 6 voc
+
+-> mp3
+
+piano
+
+
+
+
+
+
+
+
+### Thanks to https://github.com/musicandcode/Javascript-SVG-Piano/blob/main/app.js ###S
 
 - Open Console
 - app.displayNotes(["A2", "A#D", "D2"])

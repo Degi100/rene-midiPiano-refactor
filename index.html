@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <script src="./js/app.js" type="module" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Midi Piano</title>
+    <script src="./js/app.js" type="module"></script>
   </head>
   <body>
+    <label
+      >Waveform:
+      <select id="waveform" name="waveform">
+        <option value="square">Square</option>
+        <option value="sine">Sine</option>
+        <option value="triangle">Triangle</option>
+        <option value="sawtooth">Sawtooth</option>
+      </select>
+    </label>
+    <button onclick="toggleRecord()">record</button>
+    <button onclick="toggleRecord()">stop</button>
+    <button onclick="playRecord()">Play</button>
+    <div class="result"></div>
     <div id="piano"></div>
   </body>
 </html>
